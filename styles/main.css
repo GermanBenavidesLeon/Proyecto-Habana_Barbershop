@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "roboto condensed", sans-serif;
+  color: #0f0c0c;
+}
+
+a, p {
+  font-family: "lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0f0c0c;
+  font-size: 20px;
+}
+
+li {
+  list-style: none;
+  font-family: "lato", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 16px 0;
+  background-color: #464747;
+}
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .header-container h1 {
+  display: flex;
+  flex-basis: 30%;
+  cursor: pointer;
+}
+header .header-container h1 img {
+  border-radius: 80%;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  header .header-container h1 {
+    margin-bottom: 20px;
+  }
+}
+header .header-container nav {
+  flex-basis: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+header .header-container nav a {
+  margin-left: 20px;
+  padding: 5px 10px;
+}
+header .header-container nav a:hover {
+  background-color: #0f0c0c;
+  border-radius: 10px;
+  color: #d3132d;
+}
+
+footer {
+  background-color: #464747;
+  color: white;
+}
+footer h2 {
+  margin-top: 10px;
+}
+footer p {
+  text-align: center;
+  padding: 12px 0px;
+  margin: 20px 0;
+  font-size: 14px;
+  background-color: #1d1d1d;
+}
+footer i {
+  font-size: 26px;
+}
+footer .footer-content {
+  padding-top: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-content .footer-info {
+  font-size: 16px;
+}
+footer .footer-content .footer-info li:first-of-type {
+  margin-bottom: 10px;
+}
+footer .footer-content .footer-redes {
+  display: flex;
+}
+footer .footer-content .footer-redes li {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+footer .footer-content .footer-redes li i {
+  cursor: pointer;
+}
+
+.banner {
+  height: 600px;
+  width: 100%;
+  background-image: url(../img/banner.jpeg);
+  background-position: center center;
+}
+
+.index-content {
+  margin: 40px auto;
+}
+.index-content h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+@media (max-width: 992px) {
+  .index-content p {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.banner2 {
+  height: 600px;
+  width: 100%;
+  background-image: url(../img/turnos.jpeg);
+  background-position: center center;
+}/*# sourceMappingURL=main.css.map */

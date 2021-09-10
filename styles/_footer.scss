@@ -1,0 +1,47 @@
+footer {
+    background-color: rgb(70, 71, 71);;
+    color: white;
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    p {
+        text-align: center;
+        padding: 12px 0px;
+        margin: 20px 0;
+        font-size: 14px;
+        background-color: rgb(29, 29, 29);
+    }
+
+    i {
+        font-size: 26px;
+    }
+
+    .footer-content {
+        padding-top: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-info {
+                font-size: 16px;
+
+                li:first-of-type {
+                        margin-bottom: 10px;
+                };
+        }
+
+        .footer-redes {
+            display: flex;
+
+            li {
+                margin-top: 10px;
+                margin-right: 20px;
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
