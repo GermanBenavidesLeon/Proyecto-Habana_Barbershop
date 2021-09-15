@@ -28,7 +28,7 @@
         <section class="calendar" id="calendar">
             <section class="calendar-header">
                 <button type="button" class="control control--prev">&lt;</button>
-                <article class="month-name">sept 2019</article>
+                <button type="text" class="month-name">sept 2019</button type="text">
                 <button type="button" class="control control--next">&gt;</button>
             </section>
             <section class="calendar_body">
@@ -42,38 +42,28 @@
                         <article class="grid_cell grid_cel--gh">Sab</article>
                         <article class="grid_cell grid_cel--gh">Dom</article>
                     </section>
-                    <section class="grid_body">
-                        <article class="grid_cell grid_cell--gd" id="cargarFecha">1</article>
-                        <article class="grid_cell grid_cell--gd">2</article>
-                        <article class="grid_cell grid_cell--gd">3</article>
-                        <article class="grid_cell grid_cell--gd">4</article>
-                        <article class="grid_cell grid_cell--gd">5</article>
-                        <article class="grid_cell grid_cell--gd">6</article>
-                        <article class="grid_cell grid_cell--gd">7</article>
-                        <article class="grid_cell grid_cell--gd">8</article>
-                        <article class="grid_cell grid_cell--gd">9</article>
-                        <article class="grid_cell grid_cell--gd">10</article>
-                        <article class="grid_cell grid_cell--gd">11</article>
-                        <article class="grid_cell grid_cell--gd">12</article>
-                        <article class="grid_cell grid_cell--gd">13</article>
-                        <article class="grid_cell grid_cell--gd">14</article>
-                        <article class="grid_cell grid_cell--gd">15</article>
-                        <article class="grid_cell grid_cell--gd">16</article>
-                        <article class="grid_cell grid_cell--gd">17</article>
-                        <article class="grid_cell grid_cell--gd">18</article>
-                        <article class="grid_cell grid_cell--gd">19</article>
-                        <article class="grid_cell grid_cell--gd">20</article>
-                        <article class="grid_cell grid_cell--gd">21</article>
-                        <article class="grid_cell grid_cell--gd">22</article>
-                        <article class="grid_cell grid_cell--gd">23</article>
-                        <article class="grid_cell grid_cell--gd">24</article>
-                        <article class="grid_cell grid_cell--gd">25</article>
-                        <article class="grid_cell grid_cell--gd">26</article>
-                        <article class="grid_cell grid_cell--gd">27</article>
-                        <article class="grid_cell grid_cell--gd">28</article>
-                        <article class="grid_cell grid_cell--gd">29</article>
-                        <article class="grid_cell grid_cell--gd">30</article>
-                        <article class="grid_cell grid_cell--gd">31</article>
+                    <section class="grid_body" >
+                        <div id="cargarFecha">
+                        <button type="text" class="grid_cell grid_cell--gd" id="dia1" value="1" name="1">1</button>
+                        </div>
+                        <div id="cargarFecha2">
+                            <button type="text" class="grid_cell grid_cell--gd" id="dia2" value="2" name="2">2</button>
+                        </div>
+                        <div id="cargarFecha3">
+                            <button type="text" class="grid_cell grid_cell--gd" id="dia3" value="3" name="3">3</button>
+                            </div>
+                        <div id="cargarFecha4">
+                        <button type="text" class="grid_cell grid_cell--gd" id="dia4" value="4" name="4">4</button>
+                        </div>    
+                        <div id="cargarFecha5">
+                            <button type="text" class="grid_cell grid_cell--gd" id="dia5" value="5" name="5">5</button>
+                        </div>
+                        <div id="cargarFecha6">
+                            <button type="text" class="grid_cell grid_cell--gd" id="dia6" value="6" name="6">6</button>
+                        </div>
+                        <div id="cargarFecha7">
+                            <button type="text" class="grid_cell grid_cell--gd" id="dia7" value="7" name="7">7</button>
+                        </div>            
                     </section>
                 </section>
     
@@ -84,6 +74,7 @@
     
 <form class="form_horas" id="horaTurno">Horarios
     <select class="select" id="horas" name="horas">
+        <option>Turno</option>
         <option value="9:00 am">9:00 Am</option>
         <option value="10:00 am">10:00 Am</option>
         <option value="11:00 am">11:00 Am</option>

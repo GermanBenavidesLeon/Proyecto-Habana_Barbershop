@@ -65,14 +65,14 @@ form h2 {
 
 .infCorte {
     margin: 30 30px;
-    padding: 20px 40px;
+    padding: 20px 10px;
     background-color: var(--color-bg-calendar);
     border-radius: 10px;
-    width: 100%;
     font-family: sans-serif;
     color: white;
 
         input {
+            padding: 3px 0;
             margin: 0 5px;
             border-radius: 5px;
         }
@@ -116,8 +116,12 @@ form h2 {
 }
 
 .month-name {
-    color: white;
+    padding: 2px 4px;
+    color: rgb(26, 25, 25);
     margin-top: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
 .grid_header, .grid_body {
@@ -126,19 +130,23 @@ form h2 {
 }
 
 .grid_header {
+    display: flex;
+    justify-content: center;
     color: white;
     margin-bottom: 20px;
 }
 
 .grid_body {
     grid-auto-rows: 40px;
+    justify-content: center;
     color: var(--color-cell);
 }
 
 .grid_cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    padding: 4px 4px;
+    border-radius: 10px 10px 10px 10px;
+    
 }
 
 .grid_cell--gd {
