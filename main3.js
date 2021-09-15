@@ -1,4 +1,4 @@
-
+/*
     function datosCliente() {
         let nameApellido = prompt("Por favor para registrar el turno en nuestra base de datos ingresa nombApellido y apellido");
         return nameApellido;
@@ -47,4 +47,4 @@ let clientes = [
     console.log(ordenxDia);
 
     
-    
+    */

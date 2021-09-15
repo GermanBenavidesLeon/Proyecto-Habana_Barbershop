@@ -1,0 +1,146 @@
+
+:root {
+    --color-bg-calendar: #1b1e22;
+    --color-cell: #e3e3e3;
+    --color-cell-disabled: #424649;
+}
+
+.root {
+    min-height: 60vh;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.form_horas {
+    font-family: sans-serif;
+    padding: 10px 10px;
+    margin: 0 550px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    max-width: 250px;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+                
+        .select {
+            font-family: sans-serif;
+            padding: 5px 5px;
+            border-radius: 10px;
+            margin: 0 5px;
+        }
+
+}
+
+form h2 {
+    margin-top: 30px;
+    text-align: center;
+    
+}
+
+.tiposCortes {
+    font-family: sans-serif;
+    padding: 15px 5px;
+    margin: 10px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-calendar);
+    color: white;
+    
+    
+        input {
+            margin: 0px 15px;
+            border: 5px solid black;
+        }
+    
+}
+
+.infCorte {
+    margin: 30 30px;
+    padding: 20px 40px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 10px;
+    width: 100%;
+    font-family: sans-serif;
+    color: white;
+
+        input {
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .botonCarga {
+            margin-left: 150px;
+            padding: 8px 8px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+}
+
+
+.calendar {
+    padding: 20px 10px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    font-family: sans-serif;
+}
+
+.calendar-header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.calendar .control {
+    color: white;
+    background-color: transparent;
+    margin-top: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.month-name {
+    color: white;
+    margin-top: 15px;
+}
+
+.grid_header, .grid_body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid_header {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.grid_body {
+    grid-auto-rows: 40px;
+    color: var(--color-cell);
+}
+
+.grid_cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid_cell--gd {
+    cursor: pointer;
+}

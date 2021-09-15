@@ -24,19 +24,103 @@
             </nav>
         </div>
     </header>
+    <section class="root">
+        <section class="calendar" id="calendar">
+            <section class="calendar-header">
+                <button type="button" class="control control--prev">&lt;</button>
+                <article class="month-name">sept 2019</article>
+                <button type="button" class="control control--next">&gt;</button>
+            </section>
+            <section class="calendar_body">
+                <section class="grid">
+                    <section class="grid_header">
+                        <article class="grid_cell grid_cel--gh">Lun</article>
+                        <article class="grid_cell grid_cel--gh">Mar</article>
+                        <article class="grid_cell grid_cel--gh">Mie</article>
+                        <article class="grid_cell grid_cel--gh">Jue</article>
+                        <article class="grid_cell grid_cel--gh">Vie</article>
+                        <article class="grid_cell grid_cel--gh">Sab</article>
+                        <article class="grid_cell grid_cel--gh">Dom</article>
+                    </section>
+                    <section class="grid_body">
+                        <article class="grid_cell grid_cell--gd" id="cargarFecha">1</article>
+                        <article class="grid_cell grid_cell--gd">2</article>
+                        <article class="grid_cell grid_cell--gd">3</article>
+                        <article class="grid_cell grid_cell--gd">4</article>
+                        <article class="grid_cell grid_cell--gd">5</article>
+                        <article class="grid_cell grid_cell--gd">6</article>
+                        <article class="grid_cell grid_cell--gd">7</article>
+                        <article class="grid_cell grid_cell--gd">8</article>
+                        <article class="grid_cell grid_cell--gd">9</article>
+                        <article class="grid_cell grid_cell--gd">10</article>
+                        <article class="grid_cell grid_cell--gd">11</article>
+                        <article class="grid_cell grid_cell--gd">12</article>
+                        <article class="grid_cell grid_cell--gd">13</article>
+                        <article class="grid_cell grid_cell--gd">14</article>
+                        <article class="grid_cell grid_cell--gd">15</article>
+                        <article class="grid_cell grid_cell--gd">16</article>
+                        <article class="grid_cell grid_cell--gd">17</article>
+                        <article class="grid_cell grid_cell--gd">18</article>
+                        <article class="grid_cell grid_cell--gd">19</article>
+                        <article class="grid_cell grid_cell--gd">20</article>
+                        <article class="grid_cell grid_cell--gd">21</article>
+                        <article class="grid_cell grid_cell--gd">22</article>
+                        <article class="grid_cell grid_cell--gd">23</article>
+                        <article class="grid_cell grid_cell--gd">24</article>
+                        <article class="grid_cell grid_cell--gd">25</article>
+                        <article class="grid_cell grid_cell--gd">26</article>
+                        <article class="grid_cell grid_cell--gd">27</article>
+                        <article class="grid_cell grid_cell--gd">28</article>
+                        <article class="grid_cell grid_cell--gd">29</article>
+                        <article class="grid_cell grid_cell--gd">30</article>
+                        <article class="grid_cell grid_cell--gd">31</article>
+                    </section>
+                </section>
+    
+            </section>
+        </section>
+   
+</section>
+    
+<form class="form_horas" id="horaTurno">Horarios
+    <select class="select" id="horas" name="horas">
+        <option value="9:00 am">9:00 Am</option>
+        <option value="10:00 am">10:00 Am</option>
+        <option value="11:00 am">11:00 Am</option>
+        <option value="12:00 pm">12:00 Pm</option>
+        <option value="14:00 pm">14:00 Pm</option>
+        <option value="15:00 pm">15:00 Pm</option>
+        <option value="16:00 pm">16:00 Pm</option>
+        <option value="17:00 pm">17:00 Pm</option>
+        <option value="18:00 pm">18:00 Pm</option>
+    </select>
+</form>
 
-    <div class="banner2">
-
+<form>
+    <h2>Tipos de Corte</h2>
+    <div class="tiposCortes">
+        <div id="botonCorte">Corte Comun
+        <input type="radio" name="cortes1" id="corte1" value="corte comun" />
+        </div>
+        <div id="botonCorte2">Corte Barba
+        <input type="radio" name="cortes2" id="corte2" value="corte barba" />
+        </div>
+        <div id="botonCorte3">Corte Pelo y Barba
+        <input type="radio" name="cortes3" id="corte3" value="corte pelo y barba" />
+        </div>
+        <div id="botonCorte4">Corte Completo mas tinte
+        <input type="radio" name="cortes4" id="corte4" value="Corte full" />
+        </div>
     </div>
+</form>
 
-    <section class="container index-content">
-        <h2>Bienvenidos</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque cum deserunt in asperiores veritatis
-               reiciendis dolorem repellendus saepe reprehenderit ea voluptates, ducimus nisi eaque ut, blanditiis
-               sit laborum neque praesentium.
-            </p>
-
-    </section>
+<form class="infCorte" action="" id="datosTurno">
+    <label for="nombre y apellido">Nombre y apellido:</label>	
+    <input type="text" name="nombre y apellido" />
+    <label for="numero de contacto">Numero de Contacto:</label>	
+    <input type="text" name="numero de contacto" />
+    <input class="botonCarga" type="submit" value="Cargar Turno">
+</form>
 
 
     <footer>
@@ -54,8 +138,7 @@
         </div>
         <p>Copyright © 2021 Habanna Barbershop SA. All Rights Reserved.</p>
     </footer>
-    <script src="main.js"></script>
-    <script src="main2.js"></script>
-    <script src="main3.js"></script> 
+    <script src="./codigo.js"></script>
+    
 </body>
 </html>

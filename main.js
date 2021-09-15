@@ -1,4 +1,4 @@
-let corteComun = " Corte de pelo ";
+/*let corteComun = " Corte de pelo ";
 let barbaCorte = " Corte de Barba ";
 let corteCompleto = "Corte de pelo mas corte de barba ";
 let corteTinte = "Corte completo mas tinte ";
@@ -75,3 +75,4 @@ alert("A continuacion consulte por turnos y horarios disponibles de Habana Barbe
             }
         }
     }   
+*/
