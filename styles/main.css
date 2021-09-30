@@ -142,6 +142,50 @@ footer .footer-content .footer-redes li i {
   background-position: center center;
 }
 
+#Catalogo {
+  display: flex;
+  margin-top: 20px;
+}
+#Catalogo img {
+  padding: 5px;
+  margin: 5px 20px;
+  border-radius: 10px;
+  background-color: #6d6d5f;
+}
+#Catalogo h3 {
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#Catalogo div {
+  background-color: honeydew;
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+#Catalogo p {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+#Catalogo a {
+  text-decoration: none;
+  color: #030303;
+}
+
+.precioP {
+  font-weight: bolder;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.botonW {
+  background-color: #6e6d6d;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 100px;
+}
+
 :root {
   --color-bg-calendar: #1b1e22;
   --color-cell: #e3e3e3;

@@ -1,0 +1,45 @@
+[
+    {
+        "id": "1",
+        "img": "./img/americancrew.jpeg",
+        "nombre": "American Crew",
+        "valor": "$50"
+    },
+    {
+        "id": "2",
+        "img": "./img/Buzodehabana.jpeg",
+        "nombre": "Buzo Habana",
+        "valor": "$100"
+    },
+    {
+        "id": "3",
+        "img": "./img/Gorra.jpeg",
+        "nombre": "Gorra Habana Negra",
+        "valor": "$70"
+    },
+    {
+        "id": "4",
+        "img": "./img/Gorra1.jpeg",
+        "nombre": "Gorra habana Azul-Roja",
+        "valor": "$70"
+    },
+    {
+        "id": "5",
+        "img": "./img/Gorra2.jpeg",
+        "nombre": "Gorra Celeste",
+        "valor": "$70"
+    },
+    {
+        "id": "6",
+        "img": "./img/Gorra3.jpeg",
+        "nombre": "Gorra Naranja-Negro",
+        "valor": "$70"
+    },
+    {
+        "id": "7",
+        "img": "./img/Musculosasfemenino.jpeg",
+        "nombre": "Musculosas Mujer",
+        "valor": "$60"
+    }
+    
+] 

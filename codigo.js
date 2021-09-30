@@ -123,12 +123,15 @@ botonCorte4.addEventListener("click", function(){
 })
 
 
-/*Clase para crear evento, y tomar informacion del cliente en console*/
+/*Clase para crear evento, y tomar informacion del cliente en console y localStorage*/
 
 let datos = []
 
 class Cliente {
-    constructor(nombreApellido, numeroContacto) {
+    constructor(dia, hora, corte, nombreApellido, numeroContacto) {
+        this.dia = dia;
+        this.hora = hora;
+        this.corte = corte;
         this.nombreApellido = nombreApellido;
         this.numeroContacto = numeroContacto;
     } 
