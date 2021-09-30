@@ -142,6 +142,13 @@ footer .footer-content .footer-redes li i {
   background-position: center center;
 }
 
+#tituloCatalogo {
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px 0px;
+  font-size: 50px;
+}
+
 #Catalogo {
   display: flex;
   margin-top: 20px;

@@ -1,3 +1,5 @@
+/* Catalogo con Fetch y Json local */
+
 catalogo = document.getElementById("catalogo");
 
 fetch('./productos.json')
