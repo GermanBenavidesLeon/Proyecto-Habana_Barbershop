@@ -1,138 +1,145 @@
-/* Boton fecha dias del Calendario*/
+/*CALENDARIO*/
+/* Array y llamado de los Id para crear calendario*/
 
-let Calendarios = []
+let mesesNombres = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ];
 
-botonCalendario = document.getElementById("cargarFecha")
+let fechaActual = new Date();
+let diaActual = fechaActual.getDate();
+let mesActual = fechaActual.getMonth();
+let añoActual = fechaActual.getFullYear();
 
-botonCalendario.addEventListener("click", function(){
-    let fecha = document.getElementById("dia1").value
-    console.log(fecha)
-    Calendarios.push(fecha)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
+let fechas = document.getElementById('fechas');
+let mes = document.getElementById('mes');
+let año = document.getElementById('año');
+
+let prevMes = document.getElementById('prev-mes');
+let nextMes = document.getElementById('next-mes');
+
+/*para cambiar los nombre de los meses del año del calendario */
+
+mes.textContent = mesesNombres[mesActual];
+año.textContent = añoActual.toString();
+
+/*Evento para mover los botones de los meses*/
+
+prevMes.addEventListener('click', ()=>mesAnterior());
+nextMes.addEventListener('click', ()=>mesSiguiente());
+
+/* Funcion para crear los dias del mes, dia actual y los dias anteriores del mes*/
+
+const escribirMeses = (mes) => {
+    for(let i = primerDia(); i>0;i--){
+        fechas.innerHTML += ` <div class="calendario-item calenadario-dias_antes">${totalDias(mesActual-1)-(i-1)}</div>`;
+    }
+
+    for(let i=1; i<=totalDias(mes); i++){
+
+        if(i===diaActual) {
+            fechas.innerHTML += ` <div class="calendario-item fechas calendario-hoy">${i}</div>`;
+        }else{
+            fechas.innerHTML += ` <div class="calendario-item fechas">${i}</div>`;
+
+        }
+    }
+}
+
+/* funcion para la cantidad de los dias de cada mes*/
+
+const totalDias = (mes) => {
+    if(mes === -1) mes = 11;
+
+    if(mes == 0 || mes == 2 || mes == 4 || mes == 6 || mes == 7 || mes == 9 || mes == 11) {
+        return 31;
+    }else if(mes == 3 || mes == 5 || mes == 8 || mes == 10){
+        return 30;
+    }else {
+        return isLeap() ? 29:28;
+    }
+
+}
+
+/* funcion para años biciestos*/
+
+const isLeap = () => {
+    return ((añoActual % 100 !==0) && (añoActual % 4 === 0) || (añoActual % 400 === 0));
+    
+}
+
+/* funcion primer dia del mes*/
+
+const primerDia = () => {
+    let inicio = new Date(añoActual, mesActual, 1);
+    return((inicio.getDay()-1) === -1) ? 6 : inicio.getDay()-1;
+}
+
+/* funcion dias del mes anterior*/
+const mesAnterior = () => {
+    if(mesActual !== 0) {
+        mesActual--;   
+    }else{
+        mesActual = 11;
+        añoActual--;
+    }
+
+    nuevoDia();
+}
+
+/* funcion del mes siguiente */
+const mesSiguiente = () => {
+    if(mesActual !== 11) {
+        mesActual++;   
+    }else{
+        mesActual = 0;
+        añoActual++;
+    }
+
+    nuevoDia();
+}
+
+/* funcion del nuevo dia y ecribir los dias de Js*/
+
+const nuevoDia = () => {
+    fechaActual.setFullYear(añoActual, mesActual, diaActual);
+    mes.textContent =mesesNombres[mesActual];
+    año.textContent =añoActual.toString();
+    fechas.textContent = '';
+    escribirMeses(mesActual);
+
+}
+
+escribirMeses(mesActual);
+
+
+//=========================//
+/* EVENTOS Y LOCALSTORAGE*/
+
+
+fechas.addEventListener('click', function(e){
+    localStorage.setItem('Fechas', e.target.textContent)
+});
+
+
+let botonHora = document.getElementById('botonHora')
+
+botonHora.addEventListener('click', (e) =>{
+    localStorage.setItem('hora', e.target.textContent)
 })
 
-botonCalendario2 = document.getElementById("cargarFecha2")
 
-botonCalendario2.addEventListener("click", function(){
-    let fecha2 = document.getElementById("dia2").value
-    console.log(fecha2)
-    Calendarios.push(fecha2)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
+let botonCorte = document.getElementById('botonCorte')
+
+botonCorte.addEventListener('click', (e)=>{
+    localStorage.setItem("Cortes", e.target.textContent)
+    document.getElementById("datosTurno").reset();
 })
 
-botonCalendario3 = document.getElementById("cargarFecha3")
-
-botonCalendario3.addEventListener("click", function(){
-    let fecha3 = document.getElementById("dia3").value
-    console.log(fecha3)
-    Calendarios.push(fecha3)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
-})
-
-botonCalendario4 = document.getElementById("cargarFecha4")
-
-botonCalendario4.addEventListener("click", function(){
-    let fecha4 = document.getElementById("dia4").value
-    console.log(fecha4)
-    Calendarios.push(fecha4)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
-})
-
-botonCalendario5 = document.getElementById("cargarFecha5")
-
-botonCalendario5.addEventListener("click", function(){
-    let fecha5 = document.getElementById("dia5").value
-    console.log(fecha5)
-    Calendarios.push(fecha5)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
-})
-
-botonCalendario6 = document.getElementById("cargarFecha6")
-
-botonCalendario6.addEventListener("click", function(){
-    let fecha6 = document.getElementById("dia6").value
-    console.log(fecha6)
-    Calendarios.push(fecha6)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
-})
-
-botonCalendario7 = document.getElementById("cargarFecha7")
-
-botonCalendario7.addEventListener("click", function(){
-    let fecha7 = document.getElementById("dia7").value
-    console.log(fecha7)
-    Calendarios.push(fecha7)
-    localStorage.setItem("Fecha", JSON.stringify(Calendarios))
-})
-
-
-/*Boton menu desplegable de las Horas*/
-
-let horarios = []
-
-botonHoras = document.getElementById("horaTurno")
-
-botonHoras.addEventListener("click", function(){
-    let horas = document.getElementById("horas").value
-    console.log(horas)
-    horarios.push(horas)
-    localStorage.setItem("Hora", JSON.stringify(horarios))
-})
-
-
-
-/*Botones para elegir el tipo de cortes*/
-
-let cortes = []
-
-botonCorte = document.getElementById("botonCorte")
-
-
-botonCorte.addEventListener("click", function(){
-    let corte1 = document.getElementById("corte1").value
-    console.log(corte1)
-    cortes.push(corte1)
-    localStorage.setItem("Tipo Corte", JSON.stringify(cortes))
-})
-
-botonCorte2 = document.getElementById("botonCorte2")
-
-botonCorte2.addEventListener("click", function(){
-    let corte2 = document.getElementById("corte2").value
-    console.log(corte2)
-    cortes.push(corte2)
-    localStorage.setItem("Tipo Corte", JSON.stringify(cortes))
-})
-
-botonCorte3 = document.getElementById("botonCorte3")
-
-botonCorte3.addEventListener("click", function(){
-    let corte3 = document.getElementById("corte3").value
-    console.log(corte3)
-    cortes.push(corte3)
-    localStorage.setItem("Tipo Corte", JSON.stringify(cortes))
-})
-
-botonCorte4 = document.getElementById("botonCorte4")
-
-botonCorte4.addEventListener("click", function(){
-    let corte4 = document.getElementById("corte4").value
-    console.log(corte4)
-    cortes.push(corte4)
-    localStorage.setItem("Tipo Corte", JSON.stringify(cortes))
-})
-
-
-/*Clase para crear evento, y tomar informacion del cliente en console y localStorage*/
 
 let datos = []
 
 class Cliente {
-    constructor(dia, hora, corte, nombreApellido, numeroContacto) {
-        this.dia = dia;
-        this.hora = hora;
-        this.corte = corte;
-        this.nombreApellido = nombreApellido;
+    constructor(nombre, apellido, numeroContacto) {
+        this.nombre = nombre;
+        this.apellido = apellido
         this.numeroContacto = numeroContacto;
     } 
 }
@@ -141,8 +148,22 @@ document.getElementById("datosTurno").addEventListener("submit", function(e) {
     e.preventDefault()
 
     let datosCliente = new FormData(e.target)
-    const turno = new Cliente(datosCliente.get("nombre y apellido"), datosCliente.get("numero de contacto"))
-    console.log(turno);
+    const turno = new Cliente(datosCliente.get("nombre"), datosCliente.get("apellido"), datosCliente.get("numero de contacto"))
     datos.push(turno)
     localStorage.setItem("Datos", JSON.stringify(datos))
+    document.getElementById("datosTurno").reset();
+})
+
+//===========================//
+
+//ANIMACION CON JQUERY//
+
+$('#botonCarga').click(()=>{
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'El turno se ha creado, Gracias!',
+        showConfirmButton: false,
+        timer: 2000
+      })
 })

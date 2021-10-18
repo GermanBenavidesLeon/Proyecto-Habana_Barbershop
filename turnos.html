@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300&display=swap"rel="stylesheet">
     <script src="https://kit.fontawesome.com/7e28734ea8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -24,95 +25,60 @@
             </nav>
         </div>
     </header>
-    <section class="root">
-        <section class="calendar" id="calendar">
-            <section class="calendar-header">
-                <button type="button" class="control control--prev">&lt;</button>
-                <button type="text" class="month-name">sept 2019</button type="text">
-                <button type="button" class="control control--next">&gt;</button>
-            </section>
-            <section class="calendar_body">
-                <section class="grid">
-                    <section class="grid_header">
-                        <article class="grid_cell grid_cel--gh">Lun</article>
-                        <article class="grid_cell grid_cel--gh">Mar</article>
-                        <article class="grid_cell grid_cel--gh">Mie</article>
-                        <article class="grid_cell grid_cel--gh">Jue</article>
-                        <article class="grid_cell grid_cel--gh">Vie</article>
-                        <article class="grid_cell grid_cel--gh">Sab</article>
-                        <article class="grid_cell grid_cel--gh">Dom</article>
-                    </section>
-                    <section class="grid_body" >
-                        <div id="cargarFecha">
-                        <button type="text" class="grid_cell grid_cell--gd" id="dia1" value="1" name="1">1</button>
-                        </div>
-                        <div id="cargarFecha2">
-                            <button type="text" class="grid_cell grid_cell--gd" id="dia2" value="2" name="2">2</button>
-                        </div>
-                        <div id="cargarFecha3">
-                            <button type="text" class="grid_cell grid_cell--gd" id="dia3" value="3" name="3">3</button>
-                            </div>
-                        <div id="cargarFecha4">
-                        <button type="text" class="grid_cell grid_cell--gd" id="dia4" value="4" name="4">4</button>
-                        </div>    
-                        <div id="cargarFecha5">
-                            <button type="text" class="grid_cell grid_cell--gd" id="dia5" value="5" name="5">5</button>
-                        </div>
-                        <div id="cargarFecha6">
-                            <button type="text" class="grid_cell grid_cell--gd" id="dia6" value="6" name="6">6</button>
-                        </div>
-                        <div id="cargarFecha7">
-                            <button type="text" class="grid_cell grid_cell--gd" id="dia7" value="7" name="7">7</button>
-                        </div>            
-                    </section>
-                </section>
-    
-            </section>
-        </section>
-   
+    <section id="Calendario" class="calendario">
+        <div class="calendario-info">
+            <div class="calendario-prev" id="prev-mes">&#9664;</div>
+            <div class="calendario-mes" id="mes"></div>
+            <div class="calendario-año" id="año"></div>
+            <div class="calendario-next" id="next-mes">&#9654;</div>
+        </div>
+
+        <div class="calendario-semana">
+            <div class="calendario-item">Lun</div>
+            <div class="calendario-item">Mar</div>
+            <div class="calendario-item">Mie</div>
+            <div class="calendario-item">Jue</div>
+            <div class="calendario-item">Vie</div>
+            <div class="calendario-item">Sab</div>
+            <div class="calendario-item">Dom</div>    
+        </div>
+        
+        <div id="fechas" class="calendario-fecha"></div>  
     </section>
+
+        <h2>Selecciona una Hora</h2>
+        <section id="botonHora" class="horarios">
+            <div class="botonHora">9:00</div>
+            <div class="botonHora">10:00</div>
+            <div class="botonHora">11:00</div>
+            <div class="botonHora">12:00</div>
+            <div class="botonHora">14:00</div>
+            <div class="botonHora">15:00</div>
+            <div class="botonHora">16:00</div>
+            <div class="botonHora">17:00</div>
+            <div class="botonHora">18:00</div>
+        </section>
+        
     
-<form class="form_horas" id="horaTurno">Horarios
-    <select class="select" id="horas" name="horas">
-        <option>Turno</option>
-        <option value="9:00 am">9:00 Am</option>
-        <option value="10:00 am">10:00 Am</option>
-        <option value="11:00 am">11:00 Am</option>
-        <option value="12:00 pm">12:00 Pm</option>
-        <option value="14:00 pm">14:00 Pm</option>
-        <option value="15:00 pm">15:00 Pm</option>
-        <option value="16:00 pm">16:00 Pm</option>
-        <option value="17:00 pm">17:00 Pm</option>
-        <option value="18:00 pm">18:00 Pm</option>
-    </select>
-</form>
+        <h2>Tipos de Corte</h2>
+            <div id="botonCorte" class="tiposCortes">
+                <button class="inputCorte"> <span class="spanCorte"> Corte comun</span>
+                <button class="inputCorte"><span class="spanCorte">Corte barba</span> 
+                <button class="inputCorte"><span class="spanCorte">Corte full</span> 
+                <button class="inputCorte"><span class="spanCorte">Corte full mas tinte</span> 
+            
+            </div>
+    
 
-<form>
-    <h2>Tipos de Corte</h2>
-    <div class="tiposCortes" id="botonesCorte">
-        <div id="botonCorte">Corte Comun
-        <input type="radio" name="cortes1" id="corte1" value="corte comun" />
-        </div>
-        <div id="botonCorte2">Corte Barba
-        <input type="radio" name="cortes2" id="corte2" value="corte barba" />
-        </div>
-        <div id="botonCorte3">Corte Pelo y Barba
-        <input type="radio" name="cortes3" id="corte3" value="corte pelo y barba" />
-        </div>
-        <div id="botonCorte4">Corte Completo mas tinte
-        <input type="radio" name="cortes4" id="corte4" value="Corte full" />
-        </div>
-    </div>
-</form>
-
-<form class="infCorte" action="" id="datosTurno">
-    <label for="nombre y apellido">Nombre y apellido:</label>	
-    <input type="text" name="nombre y apellido" />
-    <label for="numero de contacto">Numero de Contacto:</label>	
-    <input type="text" name="numero de contacto" />
-    <input class="botonCarga" type="submit" value="Cargar Turno">
-</form>
-
+    <form class="infCorte" action="" id="datosTurno">
+        <label for="nombre">Nombre:</label>	
+        <input type="text" name="nombre" />
+        <label for="apellido">Apellidos:</label>	
+        <input type="text" name="apellido" />
+        <label for="numero de contacto">Numero de Contacto:</label>	
+        <input type="text" name="numero de contacto" />
+        <input class="botonCarga" type="submit" id="botonCarga" value="Cargar Turno">
+    </form>
 
     <footer>
         <div class="container footer-content">
@@ -129,6 +95,7 @@
         </div>
         <p>Copyright © 2021 Habanna Barbershop SA. All Rights Reserved.</p>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./codigo.js"></script>
     
 </body>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -34,40 +35,48 @@ header {
   padding: 16px 0;
   background-color: #464747;
 }
+
 header .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 @media (max-width: 768px) {
   header .header-container {
     flex-direction: column;
     align-items: center;
   }
 }
+
 header .header-container h1 {
   display: flex;
   flex-basis: 30%;
   cursor: pointer;
 }
+
 header .header-container h1 img {
   border-radius: 80%;
   margin-right: 20px;
 }
+
 @media (max-width: 768px) {
   header .header-container h1 {
     margin-bottom: 20px;
   }
 }
+
 header .header-container nav {
   flex-basis: 65%;
   display: flex;
   justify-content: flex-end;
 }
+
 header .header-container nav a {
   margin-left: 20px;
   padding: 5px 10px;
 }
+
 header .header-container nav a:hover {
   background-color: #0f0c0c;
   border-radius: 10px;
@@ -78,9 +87,11 @@ footer {
   background-color: #464747;
   color: white;
 }
+
 footer h2 {
   margin-top: 10px;
 }
+
 footer p {
   text-align: center;
   padding: 12px 0px;
@@ -88,28 +99,35 @@ footer p {
   font-size: 14px;
   background-color: #1d1d1d;
 }
+
 footer i {
   font-size: 26px;
 }
+
 footer .footer-content {
   padding-top: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 footer .footer-content .footer-info {
   font-size: 16px;
 }
+
 footer .footer-content .footer-info li:first-of-type {
   margin-bottom: 10px;
 }
+
 footer .footer-content .footer-redes {
   display: flex;
 }
+
 footer .footer-content .footer-redes li {
   margin-top: 10px;
   margin-right: 20px;
 }
+
 footer .footer-content .footer-redes li i {
   cursor: pointer;
 }
@@ -124,10 +142,12 @@ footer .footer-content .footer-redes li i {
 .index-content {
   margin: 40px auto;
 }
+
 .index-content h2 {
   text-align: center;
   margin-bottom: 24px;
 }
+
 @media (max-width: 992px) {
   .index-content p {
     width: 95%;
@@ -153,16 +173,19 @@ footer .footer-content .footer-redes li i {
   display: flex;
   margin-top: 20px;
 }
+
 #Catalogo img {
   padding: 5px;
   margin: 5px 20px;
   border-radius: 10px;
-  background-color: #6d6d5f;
+  background-color: #1b1e22;
 }
+
 #Catalogo h3 {
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 #Catalogo div {
   background-color: honeydew;
   text-align: center;
@@ -170,13 +193,15 @@ footer .footer-content .footer-redes li i {
   margin-top: 20px;
   margin-bottom: 100px;
 }
+
 #Catalogo p {
   font-family: sans-serif;
   font-size: 13px;
 }
+
 #Catalogo a {
   text-decoration: none;
-  color: #030303;
+  color: cornsilk;
 }
 
 .precioP {
@@ -186,10 +211,10 @@ footer .footer-content .footer-redes li i {
 }
 
 .botonW {
-  background-color: #6e6d6d;
+  background-color: #1b1e22;
   border-radius: 10px;
-  padding: 10px;
-  font-size: 15px;
+  padding: 10px 5px;
+  font-size: 13px;
   margin-top: 100px;
 }
 
@@ -199,136 +224,154 @@ footer .footer-content .footer-redes li i {
   --color-cell-disabled: #424649;
 }
 
-.root {
-  min-height: 60vh;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.calendario {
+  background-color: brown;
+  width: 80%;
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 20px 0;
+  border-radius: 10px;
 }
 
-.form_horas {
-  font-family: sans-serif;
-  padding: 10px 10px;
-  margin: 0 550px;
-  background-color: var(--color-bg-calendar);
-  border-radius: 10px;
-  color: white;
-  width: 100%;
-  max-width: 250px;
-  min-height: 10vh;
+.calendario .calendario-info {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-.form_horas .select {
-  font-family: sans-serif;
-  padding: 5px 5px;
-  border-radius: 10px;
-  margin: 0 5px;
+  padding: 0 32px;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
-form h2 {
-  margin-top: 30px;
+.calendario .calendario-prev, .calendario .calendario-next {
+  color: burlywood;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.calendario .calendario-prev {
+  margin-right: auto;
+}
+
+.calendario .calendario-next {
+  margin-left: auto;
+}
+
+.calendario .calendario-semana, .calendario .calendario-fecha {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.calendario .calendario-mes, .calendario .calendario-año {
+  padding: 8px 16px;
+  font-family: sans-serif;
+}
+
+.calendario .calendario-item {
   text-align: center;
+  line-height: 2;
+  font-size: 16px;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendario .calendario-hoy {
+  background-color: #acacac;
+  width: 50%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.calendario .calenadario-dias_antes {
+  opacity: .3;
+}
+
+.fechas:hover {
+  background-color: #0f0c0c;
+  border-radius: 10px;
+  color: #d3132d;
+}
+
+h2 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.horarios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.horarios .botonHora {
+  background-color: brown;
+  border: solid 1px black;
+  padding: 10px 25px;
+  margin: 5px 10px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .tiposCortes {
-  font-family: sans-serif;
-  padding: 15px 5px;
-  margin: 10px 30px;
-  border-radius: 10px;
+  background-color: brown;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-bg-calendar);
-  color: white;
+  border-radius: 10px;
+  padding: 10px 0px;
+  margin-bottom: 60px;
+  width: 900px;
+  margin: 16px auto;
 }
-.tiposCortes input {
-  margin: 0px 15px;
-  border: 5px solid black;
+
+.tiposCortes .inputCorte {
+  margin: 10px 35px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tiposCortes .spanCorte {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 .infCorte {
-  margin: 30 30px;
-  padding: 20px 10px;
-  background-color: var(--color-bg-calendar);
-  border-radius: 10px;
-  font-family: sans-serif;
-  color: white;
-}
-.infCorte input {
-  padding: 3px 0;
-  margin: 0 5px;
-  border-radius: 5px;
-}
-.infCorte .botonCarga {
-  margin-left: 150px;
-  padding: 8px 8px;
-  border-radius: 8px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.calendar {
-  padding: 20px 10px;
-  background-color: var(--color-bg-calendar);
-  border-radius: 10px;
-  width: 100%;
-  max-width: 300px;
-  font-family: sans-serif;
-}
-
-.calendar-header {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-.calendar .control {
-  color: white;
-  background-color: transparent;
-  margin-top: 5px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  padding: 0 5px;
-}
-
-.month-name {
-  padding: 2px 4px;
-  color: #1a1919;
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: sans-serif;
-}
-
-.grid_header, .grid_body {
+  background-color: brown;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.grid_header {
-  display: flex;
   justify-content: center;
-  color: white;
-  margin-bottom: 20px;
+  width: 400px;
+  margin: 16px auto;
+  margin-top: 50px;
+  padding: 10px 0px;
+  border-radius: 10px;
+  font-family: sans-serif;
 }
 
-.grid_body {
-  grid-auto-rows: 40px;
-  justify-content: center;
-  color: var(--color-cell);
+.infCorte label {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.grid_cell {
-  padding: 4px 4px;
-  border-radius: 10px 10px 10px 10px;
+.infCorte input {
+  margin: 5px 0px;
+  border-radius: 10px;
+  width: 120%;
+  padding: 5px 2px;
 }
 
-.grid_cell--gd {
+.infCorte .botonCarga {
+  margin: 20px 0px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
   cursor: pointer;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */

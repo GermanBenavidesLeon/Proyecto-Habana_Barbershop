@@ -5,150 +5,167 @@
     --color-cell-disabled: #424649;
 }
 
-.root {
-    min-height: 60vh;
-    padding: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-
-}
-
-.form_horas {
-    font-family: sans-serif;
-    padding: 10px 10px;
-    margin: 0 550px;
-    background-color: var(--color-bg-calendar);
+.calendario{
+    background-color: brown;
+    width: 80%;
+    max-width: 600px;
+    margin: 16px auto;
+    padding: 20px 0;
     border-radius: 10px;
-    color: white;
-    width: 100%;
-    max-width: 250px;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-                
-        .select {
+  
+        .calendario-info{
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+  
+        .calendario-prev, .calendario-next {
+            color: burlywood;
+            cursor: pointer;
+            font-size: 18px;
+  
+        }
+  
+        .calendario-prev{
+            margin-right: auto;
+        }
+  
+        .calendario-next{
+            margin-left: auto;
+        }
+  
+        .calendario-semana, .calendario-fecha {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 10px;
+            margin-top: 20px;
+                      
+        } 
+  
+        .calendario-mes, .calendario-año {
+            padding: 8px 16px;
             font-family: sans-serif;
-            padding: 5px 5px;
-            border-radius: 10px;
-            margin: 0 5px;
         }
-
-}
-
-form h2 {
-    margin-top: 30px;
-    text-align: center;
-    
-}
-
-.tiposCortes {
-    font-family: sans-serif;
-    padding: 15px 5px;
-    margin: 10px 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-bg-calendar);
-    color: white;
-    
-    
-        input {
-            margin: 0px 15px;
-            border: 5px solid black;
-        }
-    
-}
-
-.infCorte {
-    margin: 30 30px;
-    padding: 20px 10px;
-    background-color: var(--color-bg-calendar);
-    border-radius: 10px;
-    font-family: sans-serif;
-    color: white;
-
-        input {
-            padding: 3px 0;
-            margin: 0 5px;
-            border-radius: 5px;
-        }
-
-        .botonCarga {
-            margin-left: 150px;
-            padding: 8px 8px;
-            border-radius: 8px;
+  
+        .calendario-item {
+            text-align: center;
+            line-height: 2;
+            font-size: 16px;
             font-family: sans-serif;
+            cursor: pointer;
             font-weight: bold;
+            
         }
+  
+        .calendario-hoy {
+            background-color: rgb(172, 172, 172);
+            width: 50%;
+            border-radius: 10px;
+            margin: auto;
+  
+        }
+  
+        .calenadario-dias_antes {
+            opacity: .3;
+        }
+       
+  }
 
+  .fechas {
+    &:hover {
+        background-color: $colorPrincipal;
+        border-radius: 10px;
+        color: rgb(211, 19, 45);
+    }
+  }
+  
+  h2 {
+      text-align: center;
+      font-family: sans-serif;
+  }
+  
+  .horarios {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 60px;
+  
+      .botonHora {
+          background-color: brown;
+          border: solid 1px black;
+          padding: 10px 25px;
+          margin: 5px 10px;
+          border-radius: 10px;
+          font-family: sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+  }
+  
+  .tiposCortes {
+      background-color: brown;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      padding: 10px 0px;
+      margin-bottom: 60px;
+      width: 900px;
+      margin: 16px auto;
+  
+      .inputCorte {
+          margin: 10px 35px;
+          padding: 5px 5px;
+          border-radius: 10px;
+          cursor: pointer;
+          
+      }
+  
+      .spanCorte {
+          font-size: 18px;
+          font-family: sans-serif;
+          font-weight: bold;
+      }
+      
+  }
+  
+  .infCorte {
+      background-color: brown;
+      display: grid;
+      justify-content: center;
+      width: 400px;
+      margin: 16px auto;
+      margin-top: 50px;
+      padding: 10px 0px;
+      border-radius: 10px;
+      font-family: sans-serif;
+  
+  
+      label {
+          margin-top: 10px;
+          font-weight: bold;
+          
+      }
+  
+      input {
+          margin: 5px 0px;
+          border-radius: 10px;
+          width: 120%;
+          padding: 5px 2px;
+      }
+      
+      
+  .botonCarga {
+      margin: 20px 0px;
+      padding: 10px 4px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+  }
 }
-
-
-.calendar {
-    padding: 20px 10px;
-    background-color: var(--color-bg-calendar);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    font-family: sans-serif;
-}
-
-.calendar-header {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.calendar .control {
-    color: white;
-    background-color: transparent;
-    margin-top: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    padding: 0 5px;
-}
-
-.month-name {
-    padding: 2px 4px;
-    color: rgb(26, 25, 25);
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-
-.grid_header, .grid_body {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.grid_header {
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.grid_body {
-    grid-auto-rows: 40px;
-    justify-content: center;
-    color: var(--color-cell);
-}
-
-.grid_cell {
-    
-    padding: 4px 4px;
-    border-radius: 10px 10px 10px 10px;
-    
-}
-
-.grid_cell--gd {
-    cursor: pointer;
-}
+  
