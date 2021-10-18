@@ -109,11 +109,16 @@ const nuevoDia = () => {
 
 escribirMeses(mesActual);
 
-
 //=========================//
 /* EVENTOS Y LOCALSTORAGE*/
 
+/*Profe quise q todos los eventos click y el submit, quedaran solo con un click, para q tome la
+informacion con un solo click y enviarlo al local storage y se me complico mucho asi q lo hice separado*/
 
+
+
+/*Para este evento click, quise q al darle click a la fecha del calendario, me aparezca en el local storge,
+  dia,mes y año, no pude hacerlo*/
 fechas.addEventListener('click', function(e){
     localStorage.setItem('Fechas', e.target.textContent)
 });
